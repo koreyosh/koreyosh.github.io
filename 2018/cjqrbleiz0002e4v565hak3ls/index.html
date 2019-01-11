@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android,TextView,font," />
+  <meta name="keywords" content="Android,AsyncTask,Thread," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="用TextView显示图片和文字可将图片与文字写在一个TextView中  android:drawableTop=&amp;quot;@drawable/grass&amp;quot; &amp;lt;!--more--&amp;gt; 用TextView显示两种颜色的字体在主活动中添加如下代码：private String source = ““ +        “第一种颜色，第二种颜色，” +        “百度一下\">
-<meta name="keywords" content="Android,TextView,font">
+<meta name="description" content="AsyncTask(异步任务） 主要作用是处理主线程与子线程之间的通信问题。  主线程非常重要，主要用加载我们的UI界面，完成系统和我们用户之间的交互，并将交互后的结果展示给用户，因此主线程又称为UI线程。     我们不能在主线程中进行耗时操作（加载网络图片或进行数据库查询），因为会阻塞我们的UI Thread,同样我们也不能在子线程当中来操作我们的UI元素，那么如果我们想要从网络上下载一个图片">
+<meta name="keywords" content="Android,AsyncTask,Thread">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TextView的用法">
-<meta property="og:url" content="https://koreyosh.github.io/2018/cjma2y324000288v5l7ozjcbe/index.html">
+<meta property="og:title" content="AsyncTask的使用与演示（加载图片）">
+<meta property="og:url" content="https://koreyosh.github.io/2018/cjqrbleiz0002e4v565hak3ls/index.html">
 <meta property="og:site_name" content="技术博客">
-<meta property="og:description" content="用TextView显示图片和文字可将图片与文字写在一个TextView中  android:drawableTop=&amp;quot;@drawable/grass&amp;quot; &amp;lt;!--more--&amp;gt; 用TextView显示两种颜色的字体在主活动中添加如下代码：private String source = ““ +        “第一种颜色，第二种颜色，” +        “百度一下\">
+<meta property="og:description" content="AsyncTask(异步任务） 主要作用是处理主线程与子线程之间的通信问题。  主线程非常重要，主要用加载我们的UI界面，完成系统和我们用户之间的交互，并将交互后的结果展示给用户，因此主线程又称为UI线程。     我们不能在主线程中进行耗时操作（加载网络图片或进行数据库查询），因为会阻塞我们的UI Thread,同样我们也不能在子线程当中来操作我们的UI元素，那么如果我们想要从网络上下载一个图片">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-30T10:05:14.164Z">
+<meta property="og:updated_time" content="2018-08-30T04:21:07.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TextView的用法">
-<meta name="twitter:description" content="用TextView显示图片和文字可将图片与文字写在一个TextView中  android:drawableTop=&amp;quot;@drawable/grass&amp;quot; &amp;lt;!--more--&amp;gt; 用TextView显示两种颜色的字体在主活动中添加如下代码：private String source = ““ +        “第一种颜色，第二种颜色，” +        “百度一下\">
+<meta name="twitter:title" content="AsyncTask的使用与演示（加载图片）">
+<meta name="twitter:description" content="AsyncTask(异步任务） 主要作用是处理主线程与子线程之间的通信问题。  主线程非常重要，主要用加载我们的UI界面，完成系统和我们用户之间的交互，并将交互后的结果展示给用户，因此主线程又称为UI线程。     我们不能在主线程中进行耗时操作（加载网络图片或进行数据库查询），因为会阻塞我们的UI Thread,同样我们也不能在子线程当中来操作我们的UI元素，那么如果我们想要从网络上下载一个图片">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://koreyosh.github.io/2018/cjma2y324000288v5l7ozjcbe/"/>
+  <link rel="canonical" href="https://koreyosh.github.io/2018/cjqrbleiz0002e4v565hak3ls/"/>
 
 
 
 
 
-  <title>TextView的用法 | 技术博客</title>
+  <title>AsyncTask的使用与演示（加载图片） | 技术博客</title>
   
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://koreyosh.github.io/2018/cjma2y324000288v5l7ozjcbe/">
+    <link itemprop="mainEntityOfPage" href="https://koreyosh.github.io/2018/cjqrbleiz0002e4v565hak3ls/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张婷婷">
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TextView的用法</h1>
+          <h1 class="post-title" itemprop="name headline">AsyncTask的使用与演示（加载图片）</h1>
         
 
         <div class="post-meta">
@@ -328,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-12T15:45:02+08:00">
-                2018-05-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T10:37:09+08:00">
+                2018-05-17
               </time>
             
 
@@ -362,19 +362,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/TextView/" itemprop="url" rel="index">
-                    <span itemprop="name">TextView</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/TextView/控件/" itemprop="url" rel="index">
-                    <span itemprop="name">控件</span>
+                  <a href="/categories/Android/AsyncTask/" itemprop="url" rel="index">
+                    <span itemprop="name">AsyncTask</span>
                   </a>
                 </span>
 
@@ -410,34 +399,149 @@
       
 
       
-        <h3 id="用TextView显示图片和文字"><a href="#用TextView显示图片和文字" class="headerlink" title="用TextView显示图片和文字"></a>用TextView显示图片和文字</h3><pre><code>可将图片与文字写在一个TextView中
+        <h3 id="AsyncTask-异步任务）"><a href="#AsyncTask-异步任务）" class="headerlink" title="AsyncTask(异步任务）"></a>AsyncTask(异步任务）</h3><p> 主要作用是处理主线程与子线程之间的通信问题。</p>
+<p> 主线程非常重要，主要用加载我们的UI界面，完成系统和我们用户之间的交互，并将交互后的结果展示给用户，因此主线程又称为UI线程。   </p>
+<p> 我们不能在主线程中进行耗时操作（加载网络图片或进行数据库查询），因为会阻塞我们的UI Thread,同样我们也不能在子线程当中来操作我们的UI元素，那么如果我们想要从网络上下载一个图片，又怎么把它更新到我们的UI控件上呢，这就关系到主线程和子线程之间的通信问题了。这时我们就可以用到AsyncTask。</p>
+<p>  一般情况下，当我们需要定义一个AsyncTask时，就要定义一个类来继承这个抽象类，并实现这个抽象类中的唯一的个抽象方法doInBackground，简单的总结AsyncTask的用法就是：三个泛型，四个步骤。</p>
+<h3 id="三个泛型"><a href="#三个泛型" class="headerlink" title="三个泛型"></a>三个泛型</h3><p>   AsyncTask&lt;Params,Progress,Result&gt;</p>
+<h4 id="Params-这个泛型指定的是我们传递给异步任务执行时的参数的类型。（通常指定的URL路经即String类型）"><a href="#Params-这个泛型指定的是我们传递给异步任务执行时的参数的类型。（通常指定的URL路经即String类型）" class="headerlink" title="Params:这个泛型指定的是我们传递给异步任务执行时的参数的类型。（通常指定的URL路经即String类型）"></a>Params:这个泛型指定的是我们传递给异步任务执行时的参数的类型。（通常指定的URL路经即String类型）</h4><h4 id="Progress-这个泛型指定的是我们的异步任务在执行的时候将执行的进度返回给UI线程的参数的类型。（进度条的单位通常都是Integer类型）"><a href="#Progress-这个泛型指定的是我们的异步任务在执行的时候将执行的进度返回给UI线程的参数的类型。（进度条的单位通常都是Integer类型）" class="headerlink" title="Progress:这个泛型指定的是我们的异步任务在执行的时候将执行的进度返回给UI线程的参数的类型。（进度条的单位通常都是Integer类型）"></a>Progress:这个泛型指定的是我们的异步任务在执行的时候将执行的进度返回给UI线程的参数的类型。（进度条的单位通常都是Integer类型）</h4><h4 id="Result-这个泛型指定的异步任务执行完后返回给UI线程的结果的类型。"><a href="#Result-这个泛型指定的异步任务执行完后返回给UI线程的结果的类型。" class="headerlink" title="Result:这个泛型指定的异步任务执行完后返回给UI线程的结果的类型。"></a>Result:这个泛型指定的异步任务执行完后返回给UI线程的结果的类型。</h4><p> 我们在定义一个类继承AsyncTask类的时候，必须要指定好这三个泛型的类型，如果都不指定的话，则将其都写成void。</p>
+<h3 id="四个步骤"><a href="#四个步骤" class="headerlink" title="四个步骤"></a>四个步骤</h3><pre><code>当我们执行一个异步任务的时候，其需要按照下面的4个步骤分别执行：
+</code></pre><h4 id="onPreExecute（）：这个方法是在异步任务执行之前执行的，并且是在主线程当中执行，一般情况下，我们在这个方法里做一些UI控件的初始化动作，例如：弹出ProgressDialog"><a href="#onPreExecute（）：这个方法是在异步任务执行之前执行的，并且是在主线程当中执行，一般情况下，我们在这个方法里做一些UI控件的初始化动作，例如：弹出ProgressDialog" class="headerlink" title="onPreExecute（）：这个方法是在异步任务执行之前执行的，并且是在主线程当中执行，一般情况下，我们在这个方法里做一些UI控件的初始化动作，例如：弹出ProgressDialog"></a>onPreExecute（）：这个方法是在异步任务执行之前执行的，并且是在主线程当中执行，一般情况下，我们在这个方法里做一些UI控件的初始化动作，例如：弹出ProgressDialog</h4><h4 id="doInBackground（Params…params）：在onPreExecute（）方法执行完后会立即执行这个方法，它是用来处理异步任务的方法。-Android操作系统会在后台的线程池中开启一个子线程来执行我们这个方法，所以这个方法是在子线程中执行的。这个方法执行完之后，会将我们的结果发送给最后一个onPostExecute（）方法，在这个方法里，我们可以从网络当中获取数据等一些耗时操作"><a href="#doInBackground（Params…params）：在onPreExecute（）方法执行完后会立即执行这个方法，它是用来处理异步任务的方法。-Android操作系统会在后台的线程池中开启一个子线程来执行我们这个方法，所以这个方法是在子线程中执行的。这个方法执行完之后，会将我们的结果发送给最后一个onPostExecute（）方法，在这个方法里，我们可以从网络当中获取数据等一些耗时操作" class="headerlink" title="doInBackground（Params…params）：在onPreExecute（）方法执行完后会立即执行这个方法，它是用来处理异步任务的方法。 Android操作系统会在后台的线程池中开启一个子线程来执行我们这个方法，所以这个方法是在子线程中执行的。这个方法执行完之后，会将我们的结果发送给最后一个onPostExecute（）方法，在这个方法里，我们可以从网络当中获取数据等一些耗时操作"></a>doInBackground（Params…params）：在onPreExecute（）方法执行完后会立即执行这个方法，它是用来处理异步任务的方法。 Android操作系统会在后台的线程池中开启一个子线程来执行我们这个方法，所以这个方法是在子线程中执行的。这个方法执行完之后，会将我们的结果发送给最后一个onPostExecute（）方法，在这个方法里，我们可以从网络当中获取数据等一些耗时操作</h4><h4 id="onProgressUpdate-Progress…values-这个方法和onPreExecute方法一样都是在主线程当中执行的额，它主要是将执行的进度返回给我们的UI界面，更新我们的进度，例如：下载一张网络图片，我们要时刻显示它的进度，就可以使用这个方法来更新我们的进度。在这个方法调用之前，我们需要在doInBackground方法中调用一个publishProgress（Progress）的方法来将我们的进度时时刻刻传递给onPostUpdate方法来更新。"><a href="#onProgressUpdate-Progress…values-这个方法和onPreExecute方法一样都是在主线程当中执行的额，它主要是将执行的进度返回给我们的UI界面，更新我们的进度，例如：下载一张网络图片，我们要时刻显示它的进度，就可以使用这个方法来更新我们的进度。在这个方法调用之前，我们需要在doInBackground方法中调用一个publishProgress（Progress）的方法来将我们的进度时时刻刻传递给onPostUpdate方法来更新。" class="headerlink" title="onProgressUpdate(Progress…values):这个方法和onPreExecute方法一样都是在主线程当中执行的额，它主要是将执行的进度返回给我们的UI界面，更新我们的进度，例如：下载一张网络图片，我们要时刻显示它的进度，就可以使用这个方法来更新我们的进度。在这个方法调用之前，我们需要在doInBackground方法中调用一个publishProgress（Progress）的方法来将我们的进度时时刻刻传递给onPostUpdate方法来更新。"></a>onProgressUpdate(Progress…values):这个方法和onPreExecute方法一样都是在主线程当中执行的额，它主要是将执行的进度返回给我们的UI界面，更新我们的进度，例如：下载一张网络图片，我们要时刻显示它的进度，就可以使用这个方法来更新我们的进度。在这个方法调用之前，我们需要在doInBackground方法中调用一个publishProgress（Progress）的方法来将我们的进度时时刻刻传递给onPostUpdate方法来更新。</h4><h4 id="onPostExecute（Result…result）：当我们的异步任务执行完之后就会将结果返回给这个方法，这个方法和onPreExecute，onProgressUpdate方法一样都是在主线程中操作的，我们可以将返回结果显示在UI控件上。"><a href="#onPostExecute（Result…result）：当我们的异步任务执行完之后就会将结果返回给这个方法，这个方法和onPreExecute，onProgressUpdate方法一样都是在主线程中操作的，我们可以将返回结果显示在UI控件上。" class="headerlink" title="onPostExecute（Result…result）：当我们的异步任务执行完之后就会将结果返回给这个方法，这个方法和onPreExecute，onProgressUpdate方法一样都是在主线程中操作的，我们可以将返回结果显示在UI控件上。"></a>onPostExecute（Result…result）：当我们的异步任务执行完之后就会将结果返回给这个方法，这个方法和onPreExecute，onProgressUpdate方法一样都是在主线程中操作的，我们可以将返回结果显示在UI控件上。</h4><p> 我们的AsyncTask抽象类只有一个抽象方法，因为，如果我们要做一个异步任务，我们必须为其开辟一个新的线程，让其完成一些操作，而在完成这个异步任务时，我们可能并不需要弹出ProgressDialog并更新进度条，也不要需要将结果更新给我们的UI界面，所以除了doInBackground方法之外的三个方法都不是必须要有的，因此我们必须要实现的方法是doInBackground方法。</p>
+<p> <strong>在使用AsyncTask做异步任务时，必须要遵循以下原则</strong>：</p>
+<p> AsyncTask类必须要在UI Thread中加载，在Android Jelly_Bean版本之后这些都是自动完成的<br> execute方法必须在UI Thread当中调用<br> AsyncTask对象必须在UI Thread当中进行实例化<br> AsyncTask任务只能被执行一次</p>
+<p> <em>onPreExecute，doInBackground，publishProgress，onProgressUpdate，onPostExecute方法，这些都是由Android系统自动调用的，不能手动去调用。</em></p>
+<h3 id="加载一张网络图片代码展示"><a href="#加载一张网络图片代码展示" class="headerlink" title="加载一张网络图片代码展示"></a>加载一张网络图片代码展示</h3><p> Activity_main.xml:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout
+  xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+  xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+  android:layout_width=&quot;match_parent&quot;
+  android:layout_height=&quot;match_parent&quot;&gt;
+ &lt;ImageView
+   android:layout_width=&quot;match_parent&quot;
+   android:layout_height=&quot;300dp&quot;
+   android:id=&quot;@+id/image_view&quot;
+   android:layout_centerInParent=&quot;true&quot;/&gt;
+ &lt;Button
+   android:layout_width=&quot;wrap_content&quot;
+   android:layout_height=&quot;wrap_content&quot;
+   android:id=&quot;@+id/image_button&quot;
+   android:layout_centerInParent=&quot;true&quot;
+   android:text=&quot;@string/picture&quot;
+   android:layout_below=&quot;@id/image_view&quot;/&gt;
+&lt;/RelativeLayout&gt;
+</code></pre><p>AndroidManifest.xml:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+ &lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+      package=&quot;com.bignerdranch.android.asynctask&quot;&gt;
+ &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
 
-android:drawableTop=&quot;@drawable/grass&quot;
-&lt;!--more--&gt;
-</code></pre><h3 id="用TextView显示两种颜色的字体"><a href="#用TextView显示两种颜色的字体" class="headerlink" title="用TextView显示两种颜色的字体"></a>用TextView显示两种颜色的字体</h3><h4 id="在主活动中添加如下代码："><a href="#在主活动中添加如下代码：" class="headerlink" title="在主活动中添加如下代码："></a>在主活动中添加如下代码：</h4><p>private String source = “<font color="\"#aabb00\"">“ +<br>        “第一种颜色</font>，<font color="\"#00bb00\"">第二种颜色</font>，” +<br>        “<a href="\"http://www.baidu.com/\"">百度一下</a>\””;<br>TextView mTextShow=(TextView)findViewById(R.id.myTextView);<br>mTextShow.setText(Html.fromHtml(source));//将source通过Html解析返回给客户端<br>mTextShow.setMovementMethod(LinkMovementMethod.getInstance());//不设置，点击只能是无效的</p>
-<p> 代码解释：<font>标签：规定文本的尺寸、字体和颜色：</font></p>
-<p>   其中\是转义字符，用来转义“</p>
-<p><a> 标签定义超链接，用于从一个页面链接到另一个页面。</a></p>
-<p><a> 元素最重要的属性是 href 属性，它指定链接的目标。</a></p>
-<p>在所有浏览器中，链接的默认外观如下：</p>
-<pre><code>未被访问的链接带有下划线而且是蓝色的
-已被访问的链接带有下划线而且是紫色的
-活动链接带有下划线而且是红色的
-</code></pre><h4 id="使用SpannableString"><a href="#使用SpannableString" class="headerlink" title="使用SpannableString"></a>使用SpannableString</h4><p> String text1 = “sometimes to say,”;<br> String text2 = “is not to believe”;<br> String text = text1 + text2;<br> TextView tvtext = (TextView) findViewById(R.id.text_view1);<br> SpannableString span = new SpannableString(text);<br> URLSpan url = new URLSpan(“<a href="http://www.baidu.com&quot;)" target="_blank" rel="noopener">http://www.baidu.com&quot;)</a>;<br> tvtext.setMovementMethod(LinkMovementMethod.getInstance());<br> span.setSpan(url, 0, 16, Spanned.SPAN_INCLUSIVE_INCLUSIVE);<br> span.setSpan(new ForegroundColorSpan(Color.BLUE), 0, 16, Spannable.SPAN_INCLUSIVE_INCLUSIVE);<br> span.setSpan(new ForegroundColorSpan(Color.GREEN), 16, text.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);<br> tvtext.setText(span);</p>
-<h3 id="用TextView实现文字横向滚动"><a href="#用TextView实现文字横向滚动" class="headerlink" title="用TextView实现文字横向滚动"></a>用TextView实现文字横向滚动</h3><p>  &lt;TextView</p>
-<pre><code>android:id=&quot;@+id/myTextView&quot;
-android:layout_width=&quot;match_parent&quot;
-android:layout_height=&quot;wrap_content&quot;
-android:focusable=&quot;true&quot;//是否获得焦点
-android:textColor=&quot;@android:color/black&quot;
-android:ellipsize=&quot;marquee&quot;//以跑马灯的形式出现
-android:scrollHorizontally=&quot;true&quot;//横向滚动
-android:marqueeRepeatLimit=&quot;marquee_forever&quot;//表示重复滚动的次数（无限次）
-android:focusableInTouchMode=&quot;true&quot;
-android:textSize=&quot;15dp&quot;
-android:singleLine=&quot;true&quot;
-android:text=&quot;@string/text&quot;&gt;
-</code></pre>
+&lt;application
+    android:allowBackup=&quot;true&quot;
+    android:icon=&quot;@mipmap/ic_launcher&quot;
+    android:label=&quot;@string/app_name&quot;
+    android:supportsRtl=&quot;true&quot;
+    android:theme=&quot;@style/AppTheme&quot;&gt;
+    &lt;activity android:name=&quot;.MainActivity&quot;&gt;
+        &lt;intent-filter&gt;
+            &lt;action android:name=&quot;android.intent.action.MAIN&quot;/&gt;
+
+            &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot;/&gt;
+        &lt;/intent-filter&gt;
+    &lt;/activity&gt;&lt;!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+ App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. --&gt;
+    &lt;meta-data
+        android:name=&quot;com.google.android.gms.version&quot;
+        android:value=&quot;@integer/google_play_services_version&quot;/&gt;
+&lt;/application&gt;
+
+  &lt;/manifest&gt;
+</code></pre><p>string.xml:</p>
+<pre><code>&lt;resources&gt;
+   &lt;string name=&quot;app_name&quot;&gt;AsyncTask&lt;/string&gt;
+   &lt;string name=&quot;picture&quot;&gt;
+
+  加载一张网络图片
+
+     &lt;/string&gt;
+&lt;/resources&gt;
+</code></pre><p>MainActivity.java:</p>
+<p>package com.bignerdranch.android.asynctask;</p>
+<p>import android.app.ProgressDialog;<br>import android.graphics.Bitmap;<br>import android.graphics.BitmapFactory;<br>import android.os.AsyncTask;<br>import android.os.Bundle;<br>import android.support.v7.app.AppCompatActivity;<br>import android.view.View;<br>import android.widget.Button;<br>import android.widget.ImageView;</p>
+<p>import com.google.android.gms.appindexing.AppIndex;<br>import com.google.android.gms.common.api.GoogleApiClient;</p>
+<p>import java.io.IOException;<br>import java.io.InputStream;<br>import java.net.HttpURLConnection;<br>import java.net.URL;</p>
+<p>public class MainActivity extends AppCompatActivity {<br>    private ImageView mImageView;<br>    private Button mButton;<br>    ProgressDialog progressDialog;<br>    private final static String IMAGE_PATH = “<a href="http://img4.imgtn.bdimg.com/it/u=3153784763,2205498087&amp;fm=27&amp;gp=0.jpg&quot;" target="_blank" rel="noopener">http://img4.imgtn.bdimg.com/it/u=3153784763,2205498087&amp;fm=27&amp;gp=0.jpg&quot;</a>;<br>    private GoogleApiClient mClient;</p>
+<pre><code>@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    mImageView = (ImageView) findViewById(R.id.image_view);
+    mButton = (Button) findViewById(R.id.image_button);
+    mButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            new MyAsyncTask().execute(IMAGE_PATH);
+        }
+    });
+    progressDialog = new ProgressDialog(MainActivity.this);
+    progressDialog.setTitle(&quot;提示信息&quot;);
+    progressDialog.setMessage(&quot;正在加载，请稍候...&quot;);
+    progressDialog.setCancelable(false);
+    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+    mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+}
+public class MyAsyncTask extends AsyncTask&lt;String, Bitmap, Bitmap&gt; {
+    @Override
+    public void onPreExecute() {
+        super.onPreExecute();
+        progressDialog.show();
+    }
+
+    protected Bitmap doInBackground(String... params) {
+        return getBitmap();
+    }
+
+    private Bitmap getBitmap() {
+        Bitmap bitmap = null;
+        HttpURLConnection connection = null;
+        InputStream inputStream = null;
+        try {
+            URL url = new URL(IMAGE_PATH);
+            connection = (HttpURLConnection)url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            inputStream=connection.getInputStream();
+            bitmap= BitmapFactory.decodeStream(inputStream);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if (inputStream!=null){
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(connection!=null){
+                connection.disconnect();
+            }
+        }
+        return bitmap;
+    }
+    public void onProgressUpdate(Bitmap values){
+        super.onProgressUpdate(values);
+    }
+    public void onPostExecute(Bitmap result){
+        super.onPostExecute(result);
+        mImageView.setImageBitmap(result);
+        progressDialog.dismiss();
+    }
+
+}
+</code></pre><p>}<br>参考文献：<a href="https://www.cnblogs.com/xiaoluo501395377/p/3430542.html" target="_blank" rel="noopener">AsyncTask详解</a></p>
+
       
     </div>
     
@@ -456,9 +560,9 @@ android:text=&quot;@string/text&quot;&gt;
           
             <a href="/tags/Android/" rel="tag"># Android</a>
           
-            <a href="/tags/TextView/" rel="tag"># TextView</a>
+            <a href="/tags/AsyncTask/" rel="tag"># AsyncTask</a>
           
-            <a href="/tags/font/" rel="tag"># font</a>
+            <a href="/tags/Thread/" rel="tag"># Thread</a>
           
         </div>
       
@@ -471,8 +575,8 @@ android:text=&quot;@string/text&quot;&gt;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/cjma2y3bb000s88v5mjhd5ah0/" rel="next" title="Android王国简介">
-                <i class="fa fa-chevron-left"></i> Android王国简介
+              <a href="/2018/cjqrblej70006e4v51h9k44ha/" rel="next" title="TextView的用法">
+                <i class="fa fa-chevron-left"></i> TextView的用法
               </a>
             
           </div>
@@ -481,8 +585,8 @@ android:text=&quot;@string/text&quot;&gt;
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/cjma2y324000088v50o8c0v77/" rel="prev" title="AsyncTask的使用与演示（加载图片）">
-                AsyncTask的使用与演示（加载图片） <i class="fa fa-chevron-right"></i>
+              <a href="/2018/cjqrbleo6000xe4v5ruq0ide5/" rel="prev" title="java常见基础问题">
+                java常见基础问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -626,7 +730,7 @@ android:text=&quot;@string/text&quot;&gt;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用TextView显示图片和文字"><span class="nav-number">1.</span> <span class="nav-text">用TextView显示图片和文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用TextView显示两种颜色的字体"><span class="nav-number">2.</span> <span class="nav-text">用TextView显示两种颜色的字体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在主活动中添加如下代码："><span class="nav-number">2.1.</span> <span class="nav-text">在主活动中添加如下代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用SpannableString"><span class="nav-number">2.2.</span> <span class="nav-text">使用SpannableString</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用TextView实现文字横向滚动"><span class="nav-number">3.</span> <span class="nav-text">用TextView实现文字横向滚动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AsyncTask-异步任务）"><span class="nav-number">1.</span> <span class="nav-text">AsyncTask(异步任务）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三个泛型"><span class="nav-number">2.</span> <span class="nav-text">三个泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Params-这个泛型指定的是我们传递给异步任务执行时的参数的类型。（通常指定的URL路经即String类型）"><span class="nav-number">2.1.</span> <span class="nav-text">Params:这个泛型指定的是我们传递给异步任务执行时的参数的类型。（通常指定的URL路经即String类型）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Progress-这个泛型指定的是我们的异步任务在执行的时候将执行的进度返回给UI线程的参数的类型。（进度条的单位通常都是Integer类型）"><span class="nav-number">2.2.</span> <span class="nav-text">Progress:这个泛型指定的是我们的异步任务在执行的时候将执行的进度返回给UI线程的参数的类型。（进度条的单位通常都是Integer类型）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Result-这个泛型指定的异步任务执行完后返回给UI线程的结果的类型。"><span class="nav-number">2.3.</span> <span class="nav-text">Result:这个泛型指定的异步任务执行完后返回给UI线程的结果的类型。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四个步骤"><span class="nav-number">3.</span> <span class="nav-text">四个步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#onPreExecute（）：这个方法是在异步任务执行之前执行的，并且是在主线程当中执行，一般情况下，我们在这个方法里做一些UI控件的初始化动作，例如：弹出ProgressDialog"><span class="nav-number">3.1.</span> <span class="nav-text">onPreExecute（）：这个方法是在异步任务执行之前执行的，并且是在主线程当中执行，一般情况下，我们在这个方法里做一些UI控件的初始化动作，例如：弹出ProgressDialog</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doInBackground（Params…params）：在onPreExecute（）方法执行完后会立即执行这个方法，它是用来处理异步任务的方法。-Android操作系统会在后台的线程池中开启一个子线程来执行我们这个方法，所以这个方法是在子线程中执行的。这个方法执行完之后，会将我们的结果发送给最后一个onPostExecute（）方法，在这个方法里，我们可以从网络当中获取数据等一些耗时操作"><span class="nav-number">3.2.</span> <span class="nav-text">doInBackground（Params…params）：在onPreExecute（）方法执行完后会立即执行这个方法，它是用来处理异步任务的方法。 Android操作系统会在后台的线程池中开启一个子线程来执行我们这个方法，所以这个方法是在子线程中执行的。这个方法执行完之后，会将我们的结果发送给最后一个onPostExecute（）方法，在这个方法里，我们可以从网络当中获取数据等一些耗时操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#onProgressUpdate-Progress…values-这个方法和onPreExecute方法一样都是在主线程当中执行的额，它主要是将执行的进度返回给我们的UI界面，更新我们的进度，例如：下载一张网络图片，我们要时刻显示它的进度，就可以使用这个方法来更新我们的进度。在这个方法调用之前，我们需要在doInBackground方法中调用一个publishProgress（Progress）的方法来将我们的进度时时刻刻传递给onPostUpdate方法来更新。"><span class="nav-number">3.3.</span> <span class="nav-text">onProgressUpdate(Progress…values):这个方法和onPreExecute方法一样都是在主线程当中执行的额，它主要是将执行的进度返回给我们的UI界面，更新我们的进度，例如：下载一张网络图片，我们要时刻显示它的进度，就可以使用这个方法来更新我们的进度。在这个方法调用之前，我们需要在doInBackground方法中调用一个publishProgress（Progress）的方法来将我们的进度时时刻刻传递给onPostUpdate方法来更新。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#onPostExecute（Result…result）：当我们的异步任务执行完之后就会将结果返回给这个方法，这个方法和onPreExecute，onProgressUpdate方法一样都是在主线程中操作的，我们可以将返回结果显示在UI控件上。"><span class="nav-number">3.4.</span> <span class="nav-text">onPostExecute（Result…result）：当我们的异步任务执行完之后就会将结果返回给这个方法，这个方法和onPreExecute，onProgressUpdate方法一样都是在主线程中操作的，我们可以将返回结果显示在UI控件上。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加载一张网络图片代码展示"><span class="nav-number">4.</span> <span class="nav-text">加载一张网络图片代码展示</span></a></li></ol></div>
             
 
           </div>
