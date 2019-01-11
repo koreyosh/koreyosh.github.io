@@ -85,11 +85,11 @@
 <meta name="keywords" content="java,面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java常见基础问题">
-<meta property="og:url" content="https://koreyosh.github.io/2018/cjqrbleo6000xe4v5ruq0ide5/index.html">
+<meta property="og:url" content="https://koreyosh.github.io/2018/cjqrbwwgx000x0ov5owoeokj9/index.html">
 <meta property="og:site_name" content="技术博客">
 <meta property="og:description" content="Map是java中的接口，Map.Entry是Map的一个内部接口。  Map提供了一些常用方法，如keySet()、entrySet()等方法。   keySet()方法返回值是Map中key值的集合；entrySet()的返回值也是返回一个Set集合，此集合的类型为Map.Entry。   Map.Entry是Map声明的一个内部接口，此接口为泛型，定义为Entry&amp;lt;K,V&amp;gt;。它">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-11T00:43:51.404Z">
+<meta property="og:updated_time" content="2019-01-11T00:53:39.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java常见基础问题">
 <meta name="twitter:description" content="Map是java中的接口，Map.Entry是Map的一个内部接口。  Map提供了一些常用方法，如keySet()、entrySet()等方法。   keySet()方法返回值是Map中key值的集合；entrySet()的返回值也是返回一个Set集合，此集合的类型为Map.Entry。   Map.Entry是Map声明的一个内部接口，此接口为泛型，定义为Entry&amp;lt;K,V&amp;gt;。它">
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://koreyosh.github.io/2018/cjqrbleo6000xe4v5ruq0ide5/"/>
+  <link rel="canonical" href="https://koreyosh.github.io/2018/cjqrbwwgx000x0ov5owoeokj9/"/>
 
 
 
@@ -299,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://koreyosh.github.io/2018/cjqrbleo6000xe4v5ruq0ide5/">
+    <link itemprop="mainEntityOfPage" href="https://koreyosh.github.io/2018/cjqrbwwgx000x0ov5owoeokj9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="张婷婷">
@@ -507,11 +507,11 @@
 <li><p>@Autowired是一种函数，可以对成员变量、方法和构造函数进行标注，<br>  来完成自动装配的工作。<br> @Autowired标注可以放在成员变量上，也可以放在成员变量的set方法上。<br> 这里必须明确：@Autowired是根据类型进行自动装配的，如果需要按名称<br> 进行装配，则需要配合@Qualifier[1]使用；</p>
 </li>
 <li><p>mybatis中refid是什么意思</p>
-<p>  答：1、首先定义一个sql标签，一定要定义唯一id<sql id="Base_Column_List">name,age</sql></p>
-<pre><code>2、然后通过id引用&lt;select id=&quot;selectAll&quot;&gt;select
-     &lt;include refid=&quot;Base_Column_List&quot; /&gt;from student&lt;/select&gt;
-      这个&lt;include refid=&quot;Base_Column_List&quot; /&gt;
-      会自动把上面的代码贴过来
+<p>  答：首先定义一个sql标签，一定要定义唯一id<sql id="Base_Column_List">name,age</sql></p>
+<pre><code>然后通过id引用&lt;select id=&quot;selectAll&quot;&gt;select
+&lt;include refid=&quot;Base_Column_List&quot; /&gt;from student&lt;/select&gt;
+ 这个&lt;include refid=&quot;Base_Column_List&quot; /&gt;
+ 会自动把上面的代码贴过来
 </code></pre></li>
 <li><p>接口和抽象类有什么区别，你选择使用接口和抽象类的依据是什么？<br> 接口和抽象类的概念不一样。接口是对动作的抽象，抽象类是对根源的抽象。<br> 抽象类表示的是，这个对象是什么。接口表示的是，这个对象能做什么。比如，男人，女人，这      两个类（如果是类的话……），他们的抽象类是人。说明，他们都是人。<br> 人可以吃东西，狗也可以吃东西，你可以把“吃东西”定义成一个接口，然后让这些类去实现它.<br> 所以，在高级语言上，一个类只能继承一个类（抽象类）(正如人不可能同时是生物和非生物)，      但是可以实现多个接口(吃饭接口、走路接口)。<br>  总结几句话来说：</p>
 <pre><code>* 抽象类和接口都不能直接实例化，如果要实例化，抽象类变量必须指向实现所有抽象方法的子类      对象，接口变量必须指向实现所有接口方法的类对象。
@@ -547,7 +547,7 @@
          它只是针对一个动作的描述。而且你可以在一个类中同时实现多个
          接口。在设计阶段会降低难度的。
 </code></pre></li>
-<li><p>我们在开发mybatis时要注意四点开发规范：<br>(1) 在mapper.xml中namespace等于mapper接口地址<br>(2) mapper.java接口中的方法名和mapper.xml中statement的id一致<br>(3) mapper.java接口中的方法输入参数类型和mapper.xml中statement的parameterType指定的类            型一致。<br>(4) mapper.java接口中的方法返回值类型和mapper.xml中statement的resultType指定的类型一致。</p>
+<li><p>我们在开发mybatis时要注意四点开发规范：<br>(1) mapper.xml中namespace等于mapper接口地址<br>(2) mapper.java接口中的方法名和mapper.xml中statement的id一致<br>(3) mapper.java接口中的方法输入参数类型和mapper.xml中statement的parameterType指定的类            型一致。<br>(4) mapper.java接口中的方法返回值类型和mapper.xml中statement的resultType指定的类型一致。</p>
 </li>
 </ol>
 </li>
@@ -563,7 +563,8 @@ POJO全称是Plain Ordinary Java Object / Pure Old Java Object，
 由于 JavaBean 是被容器所创建(如 Tomcat) 的，所以JavaBean 
 应具有一个无参的构造器。
 
-另外，通常 JavaBean Serializable接口用于实现 Bean 的持久性。JavaBean是不能被跨进程访问的。
+另外，通常 JavaBean Serializable接口用于实现 Bean 的持久性。
+JavaBean是不能被跨进程访问的。
 JavaBean是一种组件技术，就好像你做了一个扳，而这个扳
 子会在很多地方 被拿去用，这个扳子也提供多种功能(你可以
 拿这个扳子扳、锤、撬等等)，而这个扳子就是一个组件。
@@ -607,7 +608,7 @@ POJO(Plain OldJava Object)这个名字用来强调它是一个普通java对象�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/cjqrbleiz0002e4v565hak3ls/" rel="next" title="AsyncTask的使用与演示（加载图片）">
+              <a href="/2018/cjqrbwwaz00000ov57igjwbk7/" rel="next" title="AsyncTask的使用与演示（加载图片）">
                 <i class="fa fa-chevron-left"></i> AsyncTask的使用与演示（加载图片）
               </a>
             
