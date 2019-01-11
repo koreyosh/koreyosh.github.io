@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://koreyosh.github.io/"/>
-  <updated>2019-01-11T01:05:19.398Z</updated>
+  <updated>2019-01-11T01:56:06.151Z</updated>
   <id>https://koreyosh.github.io/</id>
   
   <author>
@@ -17,9 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据结构常见基础问题</title>
+    <link href="https://koreyosh.github.io/2018/cjqrcvt550000qgv5yqh4knvx/"/>
+    <id>https://koreyosh.github.io/2018/cjqrcvt550000qgv5yqh4knvx/</id>
+    <published>2018-10-05T07:18:09.000Z</published>
+    <updated>2019-01-11T01:56:06.151Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;关于算法的时间复杂度很多都用包含O(logN)这样的描述，但是却没有明确说logN的底数究竟是多少?&lt;br&gt;答：算法中log级别的时间复杂度都是由于使用了分治思想,这个底数直接由分治的复杂度决定。&lt;br&gt;  
+        
+      
+    
+    </summary>
+    
+      <category term="java" scheme="https://koreyosh.github.io/categories/java/"/>
+    
+      <category term="算法" scheme="https://koreyosh.github.io/categories/java/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="数据结构" scheme="https://koreyosh.github.io/categories/java/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="java" scheme="https://koreyosh.github.io/tags/java/"/>
+    
+      <category term="数据结构" scheme="https://koreyosh.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="算法" scheme="https://koreyosh.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java常见基础问题</title>
-    <link href="https://koreyosh.github.io/2018/cjqrc8say0009r0v5ex5ma8bk/"/>
-    <id>https://koreyosh.github.io/2018/cjqrc8say0009r0v5ex5ma8bk/</id>
+    <link href="https://koreyosh.github.io/2018/cjqrcdbnn0008l0v5ou12wjjr/"/>
+    <id>https://koreyosh.github.io/2018/cjqrcdbnn0008l0v5ou12wjjr/</id>
     <published>2018-06-02T01:21:03.000Z</published>
     <updated>2019-01-11T01:05:19.398Z</updated>
     
@@ -51,8 +86,8 @@
   
   <entry>
     <title>AsyncTask的使用与演示（加载图片）</title>
-    <link href="https://koreyosh.github.io/2018/cjqrc8sad0000r0v5ji45k6i2/"/>
-    <id>https://koreyosh.github.io/2018/cjqrc8sad0000r0v5ji45k6i2/</id>
+    <link href="https://koreyosh.github.io/2018/cjqrcdbn80002l0v5s4yy6pfi/"/>
+    <id>https://koreyosh.github.io/2018/cjqrcdbn80002l0v5s4yy6pfi/</id>
     <published>2018-05-17T02:37:09.000Z</published>
     <updated>2018-08-30T04:21:07.251Z</updated>
     
@@ -83,8 +118,8 @@
   
   <entry>
     <title>TextView的用法</title>
-    <link href="https://koreyosh.github.io/2018/cjqrc8sau0006r0v5uqath4q3/"/>
-    <id>https://koreyosh.github.io/2018/cjqrc8sau0006r0v5uqath4q3/</id>
+    <link href="https://koreyosh.github.io/2018/cjqrcdbnq0009l0v5fo2ogt0t/"/>
+    <id>https://koreyosh.github.io/2018/cjqrcdbnq0009l0v5fo2ogt0t/</id>
     <published>2018-05-12T07:45:02.000Z</published>
     <updated>2018-08-30T10:05:14.164Z</updated>
     
@@ -117,8 +152,8 @@
   
   <entry>
     <title>Android王国简介</title>
-    <link href="https://koreyosh.github.io/2018/cjqrc8sam0002r0v5g8mp4uy4/"/>
-    <id>https://koreyosh.github.io/2018/cjqrc8sam0002r0v5g8mp4uy4/</id>
+    <link href="https://koreyosh.github.io/2018/cjqrcdbmw0000l0v5l0qu9039/"/>
+    <id>https://koreyosh.github.io/2018/cjqrcdbmw0000l0v5l0qu9039/</id>
     <published>2018-04-11T08:22:02.000Z</published>
     <updated>2018-08-30T09:51:28.156Z</updated>
     
@@ -143,8 +178,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://koreyosh.github.io/2018/cjqrc8saw0008r0v5d2ijs4d5/"/>
-    <id>https://koreyosh.github.io/2018/cjqrc8saw0008r0v5d2ijs4d5/</id>
+    <link href="https://koreyosh.github.io/2018/cjqrcdbnl0006l0v51ytt6dgr/"/>
+    <id>https://koreyosh.github.io/2018/cjqrcdbnl0006l0v51ytt6dgr/</id>
     <published>2018-04-10T09:20:09.000Z</published>
     <updated>2018-08-30T09:38:59.424Z</updated>
     
